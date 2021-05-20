@@ -8,22 +8,6 @@ public class Conector {
     static String url = "jdbc:sqlite:C:\\Users\\seryi\\nuevo.db";
     static Connection connect;
 
-    public static String getUrl() {
-        return url;
-    }
-
-    public static void setUrl(String url) {
-        Conector.url = url;
-    }
-
-    public static Connection getConnect() {
-        return connect;
-    }
-
-    public static void setConnect(Connection connect) {
-        Conector.connect = connect;
-    }
-
     public static boolean conectar(){
         try {
             try {
@@ -57,7 +41,7 @@ public class Conector {
 
 
         }catch (SQLException e){
-            System.out.println("Error en la ejecucion " + e);
+            System.out.println("Error en sentenciaSql " + e);
             return 0;
         }
     }

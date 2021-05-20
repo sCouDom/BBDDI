@@ -22,7 +22,6 @@ public class ConsultasI extends JFrame{
     private JTextField textField3;
     private JPanel panelRaiz;
     DefaultTableModel modelo;
-    private static String[] titulosColumnas = {"ID Asesor", "ID Cliente", "Fecha"};
 
     public ConsultasI(){
         JFrame frame = new JFrame("Clientes");
@@ -108,7 +107,6 @@ public class ConsultasI extends JFrame{
             public void actionPerformed(ActionEvent actionEvent) {
                 Consultas consulta = recuperarDatos();
                 String edit = String.format("UPDATE Consultas SET fecha='%s' WHERE idAsesor =  %o and idCliente = %o", consulta.getFecha(), consulta.getIdAsesor(), consulta.getIdCliente());
-                System.out.println(edit);
                 Conector.sentenciaSql(edit);
                 textField1.setText("");
                 textField2.setText("");
